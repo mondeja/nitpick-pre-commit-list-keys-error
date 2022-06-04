@@ -1,0 +1,2 @@
+[tool.nitpick]
+style = ["bar.toml", "baz.toml"]

@@ -1,0 +1,17 @@
+[[".pre-commit-config.yaml".repos]]
+repo = "foo"
+
+# Schema validation for .github/workflows/pre-commit.yml
+[[".pre-commit-config.yaml".repos.hooks]]
+id = "bar"
+files = "bar-1"
+
+# Schema validation for .github/workflows/pre-commit-autoupdate.yml
+[[".pre-commit-config.yaml".repos.hooks]]
+id = "bar"
+files = "bar-2"
+
+# Schema validation for .github/workflows/update-copyright-years.yml
+[[".pre-commit-config.yaml".repos.hooks]]
+id = "bar"
+files = "bar-3"

@@ -1,0 +1,13 @@
+repos:
+  - repo: foo
+    hooks:
+      - id: bar
+        files: bar-1
+      - id: bar
+        files: bar-2
+      - id: bar-3
+        files: bar-3
+  - repo: foo
+    hooks:
+      - id: bar
+        files: baz-1
