@@ -1,0 +1,32 @@
+name: nitpick
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  nitpick:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        name: Set up Python
+        with:
+          python-version: 3.x
+      - name: Install nitpick
+        run: pip install nitpick
+      - name: Run nitpick check
+        run: nitpick check
+      - name: Run nitpick fix (1)
+        run: nitpick fix
+        if: always()
+      - name: Run nitpick fix (2)
+        run: nitpick fix
+        if: always()
+      - name: Run nitpick fix (3)
+        run: nitpick fix
+        if: always()
